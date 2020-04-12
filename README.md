@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/erdtman/aes-ccm.svg?branch=master)](https://travis-ci.org/erdtman/aes-ccm)
+[![Build Status](https://travis-ci.com/erdtman/aes-ccm.svg?branch=master)](https://travis-ci.com/erdtman/aes-ccm)
 
 # aes-ccm
 
