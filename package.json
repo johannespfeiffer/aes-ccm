@@ -11,9 +11,7 @@
     "coveragehtml": "nyc report -r html",
     "precoveragehtml": "npm run coverage",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "test": "ava test/*",
-    "preinstall": "true",
-    "install": "node-pre-gyp install --fallback-to-build"
+    "test": "ava test/*"
   },
   "repository": {
     "type": "git",
