@@ -113,12 +113,12 @@ void CcmEncrypt(const FunctionCallbackInfo<Value>& args) {
   MaybeLocal<Object> ciphertext_buf = Buffer::New(isolate, (char*)ciphertext, plaintext_len);
   MaybeLocal<Object> auth_tag_buf = Buffer::New(isolate, (char*)auth_tag, auth_tag_len);
   Local<Object> return_obj = Object::New(isolate);
-  return_obj->Set(context,
+  (void)return_obj->Set(context,
                   String::NewFromUtf8(isolate,
                                       "ciphertext",
                                       v8::NewStringType::kNormal).ToLocalChecked(),
                   ciphertext_buf.FromMaybe(Local<Object>()));
-  return_obj->Set(context,
+  (void)return_obj->Set(context,
                   String::NewFromUtf8(isolate,
                                       "auth_tag",
                                       v8::NewStringType::kNormal).ToLocalChecked(),
@@ -206,11 +206,11 @@ void CcmDecrypt(const FunctionCallbackInfo<Value>& args) {
   // We strip padding from the plaintext
   MaybeLocal<Object> plaintext_buf = Buffer::New(isolate, (char*)plaintext, ciphertext_len);
   Local<Object> return_obj = Object::New(isolate);
-  return_obj->Set(context, String::NewFromUtf8(isolate,
+  (void)return_obj->Set(context, String::NewFromUtf8(isolate,
                                                "plaintext",
                                                v8::NewStringType::kNormal).ToLocalChecked(),
                  plaintext_buf.FromMaybe(Local<Object>()));
-  return_obj->Set(context, String::NewFromUtf8(isolate,
+  (void)return_obj->Set(context, String::NewFromUtf8(isolate,
                                                "auth_ok",
                                                v8::NewStringType::kNormal).ToLocalChecked(),
                  Boolean::New(isolate, auth_ok));
