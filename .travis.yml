@@ -10,7 +10,8 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
-    - libc6-compat
+before_install:
+- apk add --no-cache libc6-compat
 install:
 - npm install
 - npm install coveralls
