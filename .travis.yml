@@ -21,6 +21,7 @@ after_success:
 - docker-compose up build-linux-node-11
 - docker-compose up build-linux-node-12
 - docker-compose up build-linux-node-13
+- docker-compose up build-linux-node-14
 cache:
   directories:
     - node_modules
