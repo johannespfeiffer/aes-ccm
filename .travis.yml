@@ -1,5 +1,8 @@
 language: node_js
 sudo: false
+arch:
+  - amd64
+  - arm64
 node_js:
 - '13'
 env:
